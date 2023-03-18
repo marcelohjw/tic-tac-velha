@@ -15,6 +15,7 @@ body {
     background-color: black;
     display: flex;
     flex-wrap: wrap;
+    border: solid 1px black;
 }
 
 .square {
@@ -23,5 +24,16 @@ body {
     background-color: white;
     border: solid 2px black;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+
+.circle {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: 15px solid blue;
+    box-sizing: border-box;
 }

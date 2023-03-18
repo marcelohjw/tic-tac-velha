@@ -3,11 +3,19 @@ const info = document.querySelector('#info');
 const startCells = ["", "", "", "", "", "", "", "", ""];
 
 function createBoard() {
-    startCells.forEach((cell, index) => {
+    startCells.forEach((_cell, index) => {
         const cellElement = document.createElement('div');
         cellElement.classList.add('square');
+        cellElement.id = index;
+        cellElement.addEventListener('click', addGo);
         gameboard.append(cellElement);
     }) 
 }
 
 createBoard();
+
+function addGo(e) {
+    const goDisplay = document.createElement('div');
+    goDisplay.classList.add('circle');
+    e.target.append(goDisplay);
+}
